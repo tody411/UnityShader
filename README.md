@@ -3,10 +3,13 @@ Simple Unity Shaders
 ====
 
 Simple Unity Shader implementation examples:
-* Lambert shading
-* Phong shading
-* Toon shading
 
+* **Lambert shading**
+* **Phong shading**
+* **Toon shading**
+
+These shaders are are all written in Cg shader language.
+Main shading functions are defined in the fragment shader.
 
 ## Result
 ### Lambert
@@ -19,10 +22,19 @@ Simple Unity Shader implementation examples:
 ![Toon](Toon/Toon.png)
 
 ## Usage
-### Directory structure
-* ShaderDirectory
- - cgfx: main CgFx shader files.
- - sourceimages: sample texture files for the shader.
+### Directory Structure
+* [ShaderName]
+ - [ShaderName]Shader.shader: main Unity shader file.
 
-You can load CgFX shaders (LitSphere.cgfx, XToon.cgfx) from a built-in Maya CgFXShader material node.
-Sample textures can be used to test the shading effect.
+### Unity
+You can load Cg shaders (**LambertShader.shader**, **PhongShader.shader**, **ToonShader.shader**) as a custom Unity shader.
+
+1. Create a material.
+    *  **Assets->Create->Material** from the main menu or the Project View context menu.
+2. Set the shader property.
+    * Select the target shader (**LambertShader.shader**, etc.).
+    * Shader attributes are automatically loaded in the Inspector.
+
+## License
+
+The MIT License 2015 (c) tody
